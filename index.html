@@ -25,24 +25,6 @@ border-radius:10px;
 cursor:pointer;
 }
 
-#wheel{
-width:250px;
-height:250px;
-border-radius:50%;
-margin:20px auto;
-background:conic-gradient(
-red 0deg 60deg,
-yellow 60deg 120deg,
-green 120deg 180deg,
-blue 180deg 240deg,
-purple 240deg 300deg,
-orange 300deg 360deg
-);
-transition:transform 4s;
-}
-</style>
-</head>
-
 <body>
 
 <h1>🍜 MOMOS HUT 🍜</h1>
@@ -55,11 +37,6 @@ transition:transform 4s;
 
 <p>🔥 Fresh • Crispy • Delicious 🔥</p>
   
-<div id="wheel"></div>
-
-<button onclick="spinWheel()">SPIN NOW</button>
-
-<h2 id="result"></h2>
 
 <h3>📞 Contact: 8595256384</h3>
   
@@ -146,31 +123,8 @@ Singapuri Chowmein - ₹90 Half | ₹140 Full
 </a>
   
 <script>
-function spinWheel(){
 
-const prizes=[
-"🥤 Free Cold Drink",
-"🥟 Free Half Plate Momos",
-"🍜 Free Noodles Add-on",
-"🔥 ₹50 OFF",
-"🎉 Buy 1 Get 1",
-"😢 Better Luck Next Time"
-];
 
-const prize=
-prizes[Math.floor(Math.random()*prizes.length)];
-
-const wheel=document.getElementById("wheel");
-
-wheel.style.transform=
-"rotate("+(1800+Math.random()*720)+"deg)";
-
-setTimeout(()=>{
-document.getElementById("result").innerHTML=
-"You Won:<br>"+prize;
-},4000);
-
-}
 </script>
 
 </body>
